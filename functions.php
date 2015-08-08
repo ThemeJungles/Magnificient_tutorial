@@ -88,4 +88,10 @@ require_once('library/theme-customizer.php');
 */
 require_once('library/theme-support.php');
 
+/*
+13. library/theme-options.php
+    - add theme options
+*/
+require_once('library/theme-options.php');
+
 ?>
