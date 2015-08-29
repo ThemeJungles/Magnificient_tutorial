@@ -42,6 +42,13 @@ Kirki::add_panel( 'team_showcase', array(
     'description' => __( 'A section to show your team', 'magnificient' ),
 ) );
 
+// Adding the Frontpage Separate Page Content panel
+Kirki::add_panel( 'front_page_separate_page_content', array(
+    'priority'    => 10,
+    'title'       => __( 'Frontpage Separate Page Content', 'magnificient' ),
+    'description' => __( 'A section to fetch content from another page', 'magnificient' ),
+) );
+
 // Adding the Product Slider for Homepage section
 Kirki::add_section( 'product_slider_for_homepage', array(
     'title'          => __( 'Product Slider for Homepage', 'magnificient' ),
@@ -87,6 +94,16 @@ Kirki::add_section( 'team_showcase_for_homepage', array(
     'title'          => __( 'Team Showcase for Homepage', 'magnificient' ),
     'description'    => __( 'This will show the team members on the front page of your website', 'magnificient' ),
     'panel'          => 'team_showcase', // Not typically needed.
+    'priority'       => 160,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+) );
+
+// Adding the Frontpage Separate Page Content for Homepage section
+Kirki::add_section( 'front_page_separate_page_content_for_homepage', array(
+    'title'          => __( 'Frontpage Separate Page Content for Homepage', 'magnificient' ),
+    'description'    => __( 'This will show the separate page content on the front page of your website', 'magnificient' ),
+    'panel'          => 'front_page_separate_page_content', // Not typically needed.
     'priority'       => 160,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '', // Rarely needed.
@@ -378,5 +395,15 @@ Kirki::add_field( 'mc', array(
     'priority'    => 10,
 ) );
 
+// Adding the Separate Page Content dropdown field
+Kirki::add_field( 'mc', array(
+    'type'        => 'dropdown-pages',
+    'settings'     => 'front_page_separate_page_content_dropdown',
+    'label'       => __( 'Frontpage Separate Page Content', 'kirki' ),
+    'description' => __( 'Select the page whose content will be shown on the front page inside the frontpage separate page section', 'kirki' ),
+    'section'     => 'front_page_separate_page_content_for_homepage',
+    'default'     => '',
+    'priority'    => 10,
+) );
 
 ?>

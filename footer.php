@@ -48,16 +48,16 @@
     <div class="full-width footer-widget">
         <div class="row">
             <div class="large-3 columns">
-                <?php dynamic_sidebar("Footer-1"); ?>
+                <?php dynamic_sidebar("footer-1"); ?>
             </div>
             <div class="large-3 columns">
-                <?php dynamic_sidebar("Footer-2"); ?>
+                <?php dynamic_sidebar("footer-2"); ?>
             </div>
             <div class="large-3 columns">
-                <?php dynamic_sidebar("Footer-3"); ?>
+                <?php dynamic_sidebar("footer-3"); ?>
             </div>
             <div class="large-3 columns">
-                <?php dynamic_sidebar("Footer-4"); ?>
+                <?php dynamic_sidebar("footer-4"); ?>
             </div>
         </div>
     </div>

@@ -295,6 +295,35 @@ Template Name: Custom Homepage
 
 				<div class="separator"></div>
 
+				<!-- sidebar-frontpage-container -->
+				<div class="sidebar-frontpage-container">
+					<div class="large-12 columns">
+						<div class="row">
+							<?php dynamic_sidebar("frontpage-sidebar"); ?>
+						</div>
+					</div>
+				</div>
+				<!-- /sidebar-frontpage-container -->
+
+				<div class="separator"></div>
+
+				<!-- frontpageseparate-page-content-container -->
+				<div class="frontpageseparate-page-content-container">
+					<div class="large-12 columns panel">
+						<div class="row">
+							<?php
+								$front_page_separate_page_content_dropdown = Kirki::get_option( mc, front_page_separate_page_content_dropdown );
+								if ( $front_page_separate_page_content_dropdown ) {
+									$front_page_separate_page_content_dropdown_content = get_post_field('post_content', $front_page_separate_page_content_dropdown);
+	                				echo $front_page_separate_page_content_dropdown_content;
+								}
+							?>
+						</div>
+					</div>
+				</div>
+				<!-- /frontpageseparate-page-content-container -->
+
+
 			</div>
 			
 <?php get_footer(); ?>
