@@ -1,4 +1,4 @@
-﻿# Magnificient_csstricks
+﻿# Magnificient_tutorial
 
 ## Description
 This is a sample theme which is a child version of [Magnificient](https://github.com/ghoshnirmalya/Magnificient) WordPress theme.
